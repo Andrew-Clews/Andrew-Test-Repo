@@ -6,7 +6,7 @@ Created: 2021-03-01
 Stage: Candidate
 Discussions-To: https://forum.thegraph.com/t/rewards-destination-for-indexers-indexing-rewards/1279
 Implementations: https://github.com/graphprotocol/contracts/pull/450
-
+---
 
 # Abstract
 
