@@ -25,9 +25,3 @@ jobs:
     - name: Run markdownlint
       run: markdownlint '**/*.md'
 
-    - name: Upload markdownlint result (if using any custom reports)
-      if: failure()
-      uses: actions/upload-artifact@v3
-      with:
-        name: markdownlint-results
-        path: ./markdownlint-results/
