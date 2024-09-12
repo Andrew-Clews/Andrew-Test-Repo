@@ -31,7 +31,12 @@ jobs:
             "ignore_code_blocks": true,    // Ignores long lines within code blocks
             "ignore_tables": true          // Ignores long lines within tables
           },
-          "MD034": false                    // Disables the rule that flags bare URLs
+          "MD026": {
+            "punctuation": ".,;:!?"        // Keeps rule for trailing punctuation, but can customize punctuation marks
+          },
+          "MD032": false,                  // Ignores rule for blank lines around lists
+          "MD031": false,                  // Ignores rule for blank lines around fenced code blocks
+          "MD047": false                   // Ignores rule for a single trailing newline at the end of files
         }' > .markdownlint.json
 
     - name: Run markdownlint
