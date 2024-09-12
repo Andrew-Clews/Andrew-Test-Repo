@@ -34,8 +34,10 @@ jobs:
           "MD026": {
             "punctuation": ".,;:!?"        // Keeps rule for trailing punctuation, but can customize punctuation marks
           },
+          "MD034": false,                    // Disables the rule that flags bare URLs
           "MD032": false,                  // Ignores rule for blank lines around lists
           "MD031": false,                  // Ignores rule for blank lines around fenced code blocks
+          "MD040": false,                   // Ignores rule for fenced code blocks without a language specified
           "MD047": false                   // Ignores rule for a single trailing newline at the end of files
         }' > .markdownlint.json
 
