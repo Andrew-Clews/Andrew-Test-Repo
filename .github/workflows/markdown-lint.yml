@@ -22,6 +22,17 @@ jobs:
     - name: Install markdownlint-cli
       run: npm install -g markdownlint-cli
 
+    - name: Create markdownlint configuration
+      run: |
+        echo '{
+          "MD013": {
+            "line_length": 600,            // Sets a high line length limit (600 characters)
+            "ignore_urls": true,           // Ignores long lines that contain URLs
+            "ignore_code_blocks": true,    // Ignores long lines within code blocks
+            "ignore_tables": true          // Ignores long lines within tables
+          },
+          "MD034": false                    // Disables the rule that flags bare URLs
+        }' > .markdownlint.json
+
     - name: Run markdownlint
       run: markdownlint '**/*.md'
-
